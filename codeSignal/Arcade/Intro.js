@@ -2,26 +2,33 @@ function add(param1, param2) {
     return param1 + param2;
 }
 
+// function centuryFromYear(year) {
+//     yearEnd = year % 100;
+//     year = year.toString();
+
+//     if (year.length <= 2) return 1;
+//     else if (year.length === 3) {
+//         return yearEnd === 0 ? parseInt(year.slice(0, 1)) : parseInt(year.slice(0, 1)) + 1;
+//     }
+//     return yearEnd === 0 ? parseInt(year.slice(0, 2)) : parseInt(year.slice(0, 2)) + 1;
+
+// }
+
 function centuryFromYear(year) {
-    yearEnd = year % 100;
-    year = year.toString();
-
-    if (year.length <= 2) return 1;
-    else if (year.length === 3) {
-        return yearEnd === 0 ? parseInt(year.slice(0, 1)) : parseInt(year.slice(0, 1)) + 1;
-    }
-    return yearEnd === 0 ? parseInt(year.slice(0, 2)) : parseInt(year.slice(0, 2)) + 1;
-
+    return Math.ceil(year / 100)
 }
 
+// function checkPalindrome(inputString) {
+//   return (
+//     inputString ===
+//     inputString
+//       .split("")
+//       .reverse()
+//       .join("")
+//   );
+// }
 function checkPalindrome(inputString) {
-  return (
-    inputString ===
-    inputString
-      .split("")
-      .reverse()
-      .join("")
-  );
+  return inputString === [...inputString].reverse().join("");
 }
 
 function adjacentElementsProduct(inputArray) {
