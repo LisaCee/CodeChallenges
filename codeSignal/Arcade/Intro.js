@@ -13,7 +13,7 @@ function add(param1, param2) {
 //     return yearEnd === 0 ? parseInt(year.slice(0, 2)) : parseInt(year.slice(0, 2)) + 1;
 
 // }
-
+// built in Math function
 function centuryFromYear(year) {
     return Math.ceil(year / 100)
 }
@@ -27,20 +27,33 @@ function centuryFromYear(year) {
 //       .join("")
 //   );
 // }
+
+//spread operator instead of split
 function checkPalindrome(inputString) {
   return inputString === [...inputString].reverse().join("");
 }
 
+// function adjacentElementsProduct(inputArray) {
+//     let arrayProduct = []
+//     for (let i = 0; i < inputArray.length; i++) {
+
+//         let product = inputArray[i] * inputArray[i + 1];
+//         arrayProduct.push(product);
+//         arrayProduct.sort((a, b) => b - a);
+//     }
+//     return arrayProduct[0];
+// }
+
+//condensed sort and return into 1 line
 function adjacentElementsProduct(inputArray) {
     let arrayProduct = []
     for (let i = 0; i < inputArray.length; i++) {
-
         let product = inputArray[i] * inputArray[i + 1];
         arrayProduct.push(product);
-        arrayProduct.sort((a, b) => b - a);
     }
-    return arrayProduct[0];
+    return arrayProduct.sort((a, b) => b - a)[0];
 }
+
 
 function shapeArea(n) {
     let area = 1;
@@ -92,6 +105,18 @@ function matrixElementsSum(matrix) {
             }
         }
     return price;
+}
+
+function allLongestStrings(inputArray) {
+    let arrayLength = inputArray.sort((a, b) => b.length - a.length)[0].length;
+
+    let solution = [];
+
+    inputArray.filter((str) => {
+        str.length >= arrayLength ? solution.push(str) : null
+    })
+    return solution;
+
 }
 
 
