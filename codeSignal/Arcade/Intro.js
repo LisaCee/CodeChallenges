@@ -107,17 +107,26 @@ function matrixElementsSum(matrix) {
     return price;
 }
 
+// function allLongestStrings(inputArray) {
+//     let arrayLength = inputArray.sort((a, b) => b.length - a.length)[0].length;
+
+//     let solution = [];
+
+//     inputArray.filter((str) => {
+//         str.length >= arrayLength ? solution.push(str) : null
+//     })
+//     return solution;
+
+// }
+// refactored with filter 
+
 function allLongestStrings(inputArray) {
     let arrayLength = inputArray.sort((a, b) => b.length - a.length)[0].length;
 
-    let solution = [];
-
-    inputArray.filter((str) => {
-        str.length >= arrayLength ? solution.push(str) : null
-    })
-    return solution;
+    return inputArray.filter((word) => word.length >= arrayLength)
 
 }
+
 
 
 
