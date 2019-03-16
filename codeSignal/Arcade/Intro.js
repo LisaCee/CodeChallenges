@@ -127,6 +127,51 @@ function allLongestStrings(inputArray) {
 
 }
 
+function areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) {
+    let myStrong;
+    let myWeak;
+    let friendStrong;
+    let friendWeak;
+    if (yourLeft >= yourRight) {
+        myStrong = yourLeft;
+        myWeak = yourRight;
+    } else {
+        myStrong = yourRight;
+        myWeak = yourLeft
+    }
+
+    if (friendsLeft >= friendsRight) {
+        friendStrong = friendsLeft;
+        friendWeak = friendsRight;
+    } else {
+        friendStrong = friendsRight;
+        friendWeak = friendsLeft
+    }
+
+    return myStrong == friendStrong && myWeak == friendWeak;
+
+}
+
+//working code but way too verbose
+
+function isIPv4Address(inputString) {
+    var inputArr = inputString.split('.');
+    var trueCounter = 0;
+    if (inputArr.length === 4) {
+        for (var i = 0; i < inputArr.length; i++) {
+            if (inputArr[i] >= 0 && inputArr[i] <= 255 && inputArr[i].length >= 1) {
+                trueCounter++
+            }
+        }
+    }
+
+    if (trueCounter !== 4) {
+        return false
+    }
+    return true
+
+}
+//not my code, but learning from it.  Tried regex...
 
 
 
