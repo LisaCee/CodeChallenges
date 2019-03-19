@@ -1,3 +1,5 @@
+// ##The Journey Begins
+
 function add(param1, param2) {
     return param1 + param2;
 }
@@ -32,6 +34,8 @@ function centuryFromYear(year) {
 function checkPalindrome(inputString) {
   return inputString === [...inputString].reverse().join("");
 }
+
+// ## Edge of the Ocean
 
 // function adjacentElementsProduct(inputArray) {
 //     let arrayProduct = []
@@ -107,6 +111,8 @@ function matrixElementsSum(matrix) {
     return price;
 }
 
+// ##Smooth Sailing
+
 // function allLongestStrings(inputArray) {
 //     let arrayLength = inputArray.sort((a, b) => b.length - a.length)[0].length;
 
@@ -126,7 +132,16 @@ function allLongestStrings(inputArray) {
     return inputArray.filter((word) => word.length >= arrayLength)
 
 }
+// ## Exploring the Waters
+function addBorder(picture) {
+    let width = picture[0].length + 2;
 
+    return ["*".repeat(width),
+    ...picture.map(str => "*" + str + "*"),
+    "*".repeat(width)];
+}
+
+// ## Island of Knowledge
 function areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) {
     let myStrong;
     let myWeak;
@@ -173,5 +188,12 @@ function isIPv4Address(inputString) {
 }
 //not my code, but learning from it.  Tried regex...
 
+function addBorder(picture) {
+    let width = picture[0].length + 2;
+
+    return ["*".repeat(width),
+    ...picture.map(str => "*" + str + "*"),
+    "*".repeat(width)];
+}
 
 
